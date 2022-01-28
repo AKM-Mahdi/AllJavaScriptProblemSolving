@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .post{
+            border: 3px solid red;
+            padding: 20px;    
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="post" id="pst">
+            <h1>Post Title</h1>
+            <h4>Author</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aut molestias animi laboriosam reiciendis quas ratione repudiandae iste ut excepturi!</p>
+        </div>
+        <div class="post" id="pst1">
+            <h1>Post Title</h1>
+            <h4>Author</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aut molestias animi laboriosam reiciendis quas ratione repudiandae iste ut excepturi!</p>
+        </div>
+        <div class="post" id="pst2">
+            <h1>Post Title</h1>
+            <h4 title="this is a author">Author </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aut molestias animi laboriosam reiciendis quas ratione repudiandae iste ut excepturi!</p>
+        </div>
+
+    </section>
+    
+
+    <script>
+
+        // document.getElementById("pst").style.backgroundColor= "red";
+        // document.getElementById("pst2").style.backgroundColor="blue";
+
+        // let post = document.getElementsByClassName("post");
+        // for(i=0;i<post.length;i++){
+        //     post[0].style.backgroundColor = "red";
+        // }
+
+        let author = document.getElementsByTagName("h4");
+        for(i=0; i<author.length; i++){
+            author[1].style.color="red";
+            author[0].style.color="red";
+            author[i].innerText= "Author Name Write Here"
+            author[i].setAttribute("title","no title");
+        }
+
+        let border = document.getElementsByClassName("post");
+        for(i=0; i<border.length; i++){
+            border[i].style.border=" 5px solid green";
+        }
+
+        // document.querySelector(".post").style.backgroundColor = "yellow";
+        let select = document.querySelectorAll(".post");
+        for(i=0;i<select.length;i++){
+            select[i].style.backgroundColor ="yellow";
+        }
+
+        document.querySelector("#pst2").style.backgroundColor = "red";
+
+        
+
+
+
+    </script>
+</body>
+</html>
